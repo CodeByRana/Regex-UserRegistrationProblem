@@ -17,7 +17,7 @@ public class RegexValidation {
             System.out.println("Invalid first name");
         }
     }
-    //Check regex for first name
+    //Check regex for last name
     public void validLastName(String lastName){
 
         String nameVar = "^[A-Z][a-zA-Z]{2,}$";
@@ -44,6 +44,7 @@ public class RegexValidation {
             System.out.println("Invalid Email Id ");
         }
     }
+    //Check regex for Mobile Format
     public void validMobileFormat(String mobileNo){
 
         String MobileNoVar = "^[0-9]{2}\\s?[0-9]{10}$";
@@ -55,6 +56,19 @@ public class RegexValidation {
         }
         else {
             System.out.println("Invalid Mobile No ");
+        }
+    }
+    //Check regex for Validation password
+    public void validationPassword(String password){
+
+        String passwordVar = "^[a-zA-Z]{8}$";
+
+        Pattern pattern = Pattern.compile(passwordVar);
+        Matcher matcher = pattern.matcher(password);
+        if (matcher.matches()){
+            System.out.println("Valid Password");
+        }else {
+            System.out.println("Invalid - Password should be more than 8 character");
         }
     }
 }
