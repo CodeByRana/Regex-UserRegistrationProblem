@@ -13,15 +13,19 @@ public class UserRegistration {
         Scanner sc =new Scanner(System.in);
         RegexValidation rv = new RegexValidation();
 
-        //Type first name here
+        //Enter first name
         System.out.println("Enter the first name : ");
         String firstName = sc.next();
         rv.validFirstName(firstName);
 
-        //Type second name here
-        System.out.println("Enter the first name : ");
+        //Enter last name
+        System.out.println("Enter the last name : ");
         String lastName = sc.next();
-        rv.validLastName(firstName);
+        rv.validLastName(lastName);
 
+        //Enter email id
+        System.out.println("Enter the e-mail id: ");
+        String emailId = sc.next();
+        rv.validEmailAddress(emailId);
     }
 }
