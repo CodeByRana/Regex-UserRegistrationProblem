@@ -18,5 +18,10 @@ public class UserRegistration {
         String firstName = sc.next();
         rv.validFirstName(firstName);
 
+        //Type second name here
+        System.out.println("Enter the first name : ");
+        String lastName = sc.next();
+        rv.validLastName(firstName);
+
     }
 }

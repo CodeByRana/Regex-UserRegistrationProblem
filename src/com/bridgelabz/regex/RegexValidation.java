@@ -16,4 +16,16 @@ public class RegexValidation {
             System.out.println("Invalid first name");
         }
     }
+    public void validLastName(String lastName){
+
+        String nameVar = "^[A-Z]{1}[a-z]{2,}$";
+
+        Pattern pattern = Pattern.compile(nameVar);
+        Matcher matcher = pattern.matcher(lastName);
+        if (matcher.matches()){
+            System.out.println("Valid last name");
+        }else {
+            System.out.println("Invalid last name");
+        }
+    }
 }
