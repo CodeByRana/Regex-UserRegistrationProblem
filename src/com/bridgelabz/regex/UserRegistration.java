@@ -1,8 +1,6 @@
 package com.bridgelabz.regex;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class UserRegistration {
     public static void main(String[] args) {
@@ -27,5 +25,10 @@ public class UserRegistration {
         System.out.println("Enter the e-mail id: ");
         String emailId = sc.next();
         rv.validEmailAddress(emailId);
+
+        //Enter Mobile Number format
+        System.out.println("Enter the Mobile No :");
+        String mobileNo = sc.next();
+        rv.validMobileFormat(mobileNo);
     }
 }

@@ -7,7 +7,7 @@ public class RegexValidation {
     //Check regex for first name
     public void validFirstName(String firstName){
 
-        String nameVar = "^[A-Z]{1}[a-z]{2,}$";
+        String nameVar = "^[A-Z][a-zA-Z]{2,}$";
 
         Pattern pattern = Pattern.compile(nameVar);
         Matcher matcher = pattern.matcher(firstName);
@@ -20,7 +20,7 @@ public class RegexValidation {
     //Check regex for first name
     public void validLastName(String lastName){
 
-        String nameVar = "^[A-Z]{1}[a-z]{2,}$";
+        String nameVar = "^[A-Z][a-zA-Z]{2,}$";
 
         Pattern pattern = Pattern.compile(nameVar);
         Matcher matcher = pattern.matcher(lastName);
@@ -33,7 +33,7 @@ public class RegexValidation {
     //Check regex for email address
     public void validEmailAddress(String emailId){
 
-        String emailVar = "^[a-z]{3,}?.[a-zA-Z0-9-._+]{1,}@[a-z]{2,}.[a-z]{2,}";
+        String emailVar = "^[a-z0-9]{3,20}([_.+-][a-z0-9]+)?@[a-z0-9]+.[a-z]{2,3}(.[a-z]{2})?";
 
         Pattern pattern = Pattern.compile(emailVar);
         Matcher matcher = pattern.matcher((emailId));
@@ -42,6 +42,19 @@ public class RegexValidation {
         }
         else {
             System.out.println("Invalid Email Id ");
+        }
+    }
+    public void validMobileFormat(String mobileNo){
+
+        String MobileNoVar = "^[0-9]{2}\\s?[0-9]{10}$";
+
+        Pattern pattern = Pattern.compile(MobileNoVar);
+        Matcher matcher = pattern.matcher((mobileNo));
+        if(matcher.matches()){
+            System.out.println("Valid Mobile Number ");
+        }
+        else {
+            System.out.println("Invalid Mobile No ");
         }
     }
 }
