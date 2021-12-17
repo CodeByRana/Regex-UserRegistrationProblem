@@ -61,14 +61,14 @@ public class RegexValidation {
     //Check regex for Validation password
     public void validationPassword(String password){
 
-        String passwordVar = "^[a-zA-Z]{8}$";
+        String passwordVar = "^(?=.*[A-Z])[a-zA-Z0-9@#$%^&*()]{8,}$";
 
         Pattern pattern = Pattern.compile(passwordVar);
         Matcher matcher = pattern.matcher(password);
         if (matcher.matches()){
             System.out.println("Valid Password");
         }else {
-            System.out.println("Invalid - Password should be more than 8 character");
+            System.out.println("Invalid Password");
         }
     }
 }

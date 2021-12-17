@@ -33,8 +33,7 @@ public class UserRegistration {
 
         //Enter Password Minimum 8 characters
         System.out.println("Enter the Password :");
-//      String password = sc.next();
-        String password = "Deepak@rana12";
+        String password = sc.next();
         rv.validationPassword(password);
     }
 }
