@@ -20,7 +20,7 @@ public class RegexValidation {
     //Check regex for last name
     public void validLastName(String lastName){
 
-        String nameVar = "^[A-Z][a-zA-Z]{2,}$";
+        String nameVar = "^[a-zA-z0-9!@#$%^&*()?]{8}$";
 
         Pattern pattern = Pattern.compile(nameVar);
         Matcher matcher = pattern.matcher(lastName);
