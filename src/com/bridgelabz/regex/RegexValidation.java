@@ -68,7 +68,7 @@ public class RegexValidation {
         if (matcher.matches()){
             System.out.println("Valid Password");
         }else {
-            System.out.println("Invalid - Password should be more than 8 character");
+            System.out.println("Invalid Password");
         }
     }
 }
