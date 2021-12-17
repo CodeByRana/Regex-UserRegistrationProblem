@@ -61,7 +61,7 @@ public class RegexValidation {
     //Check regex for Validation password
     public void validationPassword(String password){
 
-        String passwordVar = "^(?=.*\\d)(?=.*[A-Z])[a-zA-Z0-9@#$%^&*()]{8,}$$";
+        String passwordVar = "^(?=.*[A-Z])([@#$%])$";
 
         Pattern pattern = Pattern.compile(passwordVar);
         Matcher matcher = pattern.matcher(password);
